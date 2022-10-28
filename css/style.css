@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+/* common styles */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* stylization of header elements */
+.header {
+    background: url('../img/headerBg.png') center/cover;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+.menu__link-item {
+    font: 600 1.1em 'Poppins', sans-serif;
+    color: #fff;
+    display: block;
+    padding-bottom: 30px;
+}
+.song-title {
+    font: bold 2em 'Poppins', sans-serif;
+    color: #fff;
+}
+.song-name {
+    font: bold 2em 'Poppins', sans-serif;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+/* stylization of player elements */
+.player {
+    padding: 10px;
+}
+.player__btn {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.player__time {
+    color: #fff;
+    margin-left: 10px;
+}
+.progress {
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progress__content {
+    background: #e3e9ed;
+    width: 890px;
+    height: 2px;
+    cursor: pointer;
+    position: relative;
+}
+.progress__line {
+    background: #7a66cc;
+    height: 2px;
+    width: 0;
+}
+.progress__item {
+    background: #7a66cc;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 20px;
+    transform: translateY(-50%);
+    width: 2px;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 768px) { 
+
+    /* stylization of header elements */
+    .header {
+        text-align: inherit;
+    }
+    .header-content {
+        position: absolute;
+        width: 100%;
+        bottom: 100px;
+        padding: 0 20px 0 20px;
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 920px;
+        margin: auto;
+        padding: 0 5px 0 5px;
+    }
+    .logo {
+        padding: 0 20px 0 0;
+    }
+    .menu {
+        display: flex;
+        width: 650px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu__link-item {
+        padding: 0;
+    }
+
+    /* stylization of player elements */
+    .song-name {
+        font-size: 6.2em;
+    }
+
+    
+}
