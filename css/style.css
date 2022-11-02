@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 
 /* common styles */
+body {
+    background:#1c1b21;
+}
 .container {
     max-width: 1100px;
     margin: auto;
 }
+
 
 /* stylization of header elements */
 .header {
@@ -30,8 +34,11 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
 }
+.row {
+    display: flex;
+}
 
-/* stylization of player elements */
+/* stylization of player music elements */
 .player {
     padding: 10px;
 }
@@ -42,11 +49,14 @@
     margin-right: 10px;
 }
 .player__time {
+    min-width: 80px;
+    display: flex;
+    justify-content: space-between;
     color: #fff;
     margin-left: 10px;
 }
 .progress {
-    margin: 100px auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,13 +64,13 @@
 .progress__content {
     background: #e3e9ed;
     width: 890px;
-    height: 2px;
+    height: 10px;
     cursor: pointer;
     position: relative;
 }
 .progress__line {
     background: #7a66cc;
-    height: 2px;
+    height: 10px;
     width: 0;
 }
 .progress__item {
@@ -74,6 +84,47 @@
     z-index: 1;
 }
 
+/* stylization of blogs elements */
+.blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+.blog {
+    max-width: 350px;
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 20px 0px;
+}
+.blog__content {
+    font: 500 1em 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #7a66cc;
+    border-radius: 20px 0px;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 350px;
+    min-height: 90px;
+    color: #fff;
+}
+
+.blog-first {
+    background: url('../img/first.png') center/cover;
+}
+.blog-second {
+    background: url('../img/second.png') center/cover;
+}
+.blog-third {
+    background: url('../img/third.png') center/cover;
+}
 @media only screen and (min-width: 768px) { 
 
     /* stylization of header elements */
@@ -83,7 +134,7 @@
     .header-content {
         position: absolute;
         width: 100%;
-        bottom: 100px;
+        bottom: 50px;
         padding: 0 20px 0 20px;
     }
     .nav {
@@ -111,5 +162,12 @@
         font-size: 6.2em;
     }
 
-    
+    /* stylization of blogs elements */
+    .blogs {
+        flex-direction: inherit;
+        justify-content: space-between;
+    }
+    .blog:not(:last-child)  {
+        margin-right: 30px;
+    }
 }
