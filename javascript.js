@@ -74,5 +74,18 @@ audio.addEventListener('timeupdate', (e) => musicPlayer.updateProgress(e));
 progressContent.addEventListener('click', (e) => musicPlayer.setProgress(e));
 
 
+const contFirst  = document.querySelector('.blog-first').querySelector('.blog__content');
+const contSecond  = document.querySelector('.blog-second').querySelector('.blog__content');
+const contThird = document.querySelector('.blog-third').querySelector('.blog__content');
+
+window.addEventListener('resize',()=> {
+    let a = contFirst.offsetHeight;
+    let b = contSecond.offsetHeight;
+    let c = contThird.offsetHeight;
+    let maxValue = Math.max.apply(null, [a,b,c]);
+    contFirst.style.height = maxValue + 'px';
+    contSecond.style.height = maxValue + 'px';
+    contThird.style.height = maxValue + 'px';
+},true)
 
                 
